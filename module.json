@@ -1,32 +1,46 @@
 {
-  "id": "module",
-  "title": "New Module",
-  "description": "",
+  "id": "pf2e-all-tokens",
+  "title": "PF2e Use all module tokens",
+  "description": "A module to use the token images from all owned modules without needing to activate all.",
   "version": "#{VERSION}#",
   "library": "false",
   "manifestPlusVersion": "1.2.0",
   "compatibility": {
     "minimum": 10,
-    "verified": 10,
+    "verified": 11,
     "maximum": 11
+  },
+  "persistentStorage": true,
+  "flags": {
+    "pf2e-all-tokens": {
+      "pf2e-art": "modules/pf2e-all-tokens/storage/pf2e-art.json"
+    }
   },
   "authors": [
     {
-      "name": "The League of Extraordinary FVTT Developers",
-      "url": "https://github.com/League-of-Foundry-Developers",
-      "discord": "discordID#0001"
+      "name": "Virenerus",
+      "url": "https://github.com/manuel-hegner",
+      "discord": "virenerus"
     }
   ],
   "relationships": {
-    "systems": [],
+    "systems": [
+      {
+        "id": "pf2e",
+        "type": "system",
+        "manifest": "https://github.com/foundryvtt/pf2e/releases/latest/download/system.json",
+        "compatibility": {
+          "minimum": "5.0.2",
+          "verified": "5.0.2"
+        }
+      }
+    ],
     "requires": []
   },
   "esmodules": [
     "scripts/module.js"
   ],
-  "scripts": [
-    "scripts/lib/lib.js"
-  ],
+  "scripts": [],
   "styles": [
     "styles/module.css"
   ],
@@ -42,10 +56,5 @@
   "download": "#{DOWNLOAD}#",
   "license": "LICENSE",
   "readme": "README.md",
-  "media": [
-    {
-      "type": "icon",
-      "url": "https://avatars2.githubusercontent.com/u/71292812?s=400&u=ccdb4eeb7abf551ca8f314e5a9bfd0479a4d3d41&v=4"
-    }
-  ]
+  "media": []
 }
