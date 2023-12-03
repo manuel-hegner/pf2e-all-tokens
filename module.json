@@ -7,7 +7,7 @@
   "manifestPlusVersion": "1.2.0",
   "compatibility": {
     "minimum": 10,
-    "verified": 11,
+    "verified": 11.315,
     "maximum": 11
   },
   "persistentStorage": true,
@@ -30,8 +30,8 @@
         "type": "system",
         "manifest": "https://github.com/foundryvtt/pf2e/releases/latest/download/system.json",
         "compatibility": {
-          "minimum": "5.0.2",
-          "verified": "5.0.2"
+          "minimum": "5.0.0",
+          "verified": "5.10.3"
         }
       }
     ],
