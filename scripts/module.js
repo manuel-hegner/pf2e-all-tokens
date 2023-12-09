@@ -24,7 +24,7 @@ Hooks.once('ready', async function() {
                 modules.push({
                     path: path,
                     priority: priority(path),
-                    file: await $.getJSON(path)
+                    file: await $.getJSON(path).catch(e=>{console.log(e); return {};})
                 });
             }
         }
