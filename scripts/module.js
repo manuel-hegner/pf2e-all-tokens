@@ -16,7 +16,7 @@ Hooks.once('ready', async function() {
     let modules = [];
 
     for(let m of game.modules.toJSON()) {
-        if((typeof m.flags) !== 'object') return;
+        if((typeof m.flags) !== 'object' || m.id === 'pf2e-all-tokens') continue;
         for(let flag of Object.values(m?.flags)) {
             if((typeof flag) !== 'object') continue;
             if(flag['pf2e-art']) {
