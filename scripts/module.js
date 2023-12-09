@@ -48,7 +48,7 @@ Hooks.once('ready', async function() {
 
 
     let resultJSON = JSON.stringify(result, null, 2);
-    let old = await $.get('modules/pf2e-all-tokens/storage/pf2e-art.json', null, null, 'text');
+    let old = await $.get('modules/pf2e-all-tokens/storage/pf2e-art.json', null, null, 'text').catch(e=>{console.log(e); return '{}';});
     if(resultJSON !== old) {
         console.log("pf2e-all-tokens | Art content changed, rewriting");
         await FilePicker.uploadPersistent('pf2e-all-tokens', '', new File([resultJSON], 'pf2e-art.json', {type: "application/json"}));
