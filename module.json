@@ -7,8 +7,8 @@
   "manifestPlusVersion": "1.2.0",
   "compatibility": {
     "minimum": 10,
-    "verified": 11.315,
-    "maximum": 11
+    "verified": 12.327,
+    "maximum": 12
   },
   "persistentStorage": true,
   "flags": {
