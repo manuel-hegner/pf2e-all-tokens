@@ -6,9 +6,8 @@
   "library": "false",
   "manifestPlusVersion": "1.2.0",
   "compatibility": {
-    "minimum": 10,
-    "verified": 12.327,
-    "maximum": 12
+    "minimum": 12,
+    "verified": 12.330
   },
   "persistentStorage": true,
   "flags": {
@@ -30,20 +29,17 @@
         "type": "system",
         "manifest": "https://github.com/foundryvtt/pf2e/releases/latest/download/system.json",
         "compatibility": {
-          "minimum": "5.0.0",
-          "verified": "5.10.3"
+          "minimum": "6.2.0",
+          "verified": "6.2.0"
         }
       }
-    ],
-    "requires": []
+    ]
   },
   "esmodules": [
     "scripts/module.js"
   ],
   "scripts": [],
-  "styles": [
-    "styles/module.css"
-  ],
+  "styles": [],
   "languages": [],
   "url": "#{URL}#",
   "manifest": "#{MANIFEST}#",
