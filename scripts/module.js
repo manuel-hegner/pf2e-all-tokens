@@ -36,6 +36,7 @@ Hooks.once('ready', async function() {
         /*copy end*/
     }
 
+    let newWayUsingModules = [];
     for(let m of game.modules) {
         if(m.active) continue;
 
@@ -45,6 +46,7 @@ Hooks.once('ready', async function() {
                 let {credit, mapping} = flags.compendiumArtMappings.pf2e;
                 const json = await foundry.utils.fetchJsonWithTimeout(mapping);
                 await game.compendiumArt.parseArtMapping(m.id, json, credit);
+                newWayUsingModules.push(m.id);
             } catch(e) {
                 Hooks.onError("CompendiumArt#_registerArt", e, {
                     msg: `Failed to parse compendium art mapping for package '${m?.title}'`,
@@ -62,8 +64,11 @@ Hooks.once('ready', async function() {
 
     let modules = [];
 
-    for(let m of game.modules.toJSON()) {
-        if((typeof m.flags) !== 'object' || m.id === 'pf2e-all-tokens') continue;
+    for(let m of game.modules) {
+        //also go through active modules or this will need rebuilding whenever the world is switched
+        //skip modules that we already handled above because some modules specify both and that leads to problems
+        if(m.id === 'pf2e-all-tokens' || newWayUsingModules.includes(m.id)) continue;
+
         for(let flag of Object.values(m?.flags)) {
             if((typeof flag) !== 'object') continue;
             if(flag['pf2e-art']) {
