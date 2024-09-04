@@ -1,13 +1,12 @@
 {
   "id": "pf2e-all-tokens",
   "title": "PF2e Use all module tokens",
-  "description": "A module to use the token images from all owned modules without needing to activate all.",
+  "description": "A module to use the token images from most owned modules without needing to activate all.",
   "version": "#{VERSION}#",
   "library": "false",
-  "manifestPlusVersion": "1.2.0",
   "compatibility": {
     "minimum": 12,
-    "verified": 12.330
+    "verified": 12.331
   },
   "persistentStorage": true,
   "flags": {
@@ -29,8 +28,8 @@
         "type": "system",
         "manifest": "https://github.com/foundryvtt/pf2e/releases/latest/download/system.json",
         "compatibility": {
-          "minimum": "6.2.0",
-          "verified": "6.2.0"
+          "minimum": "6.3.0",
+          "verified": "6.3.0"
         }
       }
     ]
