@@ -34,7 +34,7 @@ Hooks.once('ready', async function() {
                 if ( !settings.tokens ) delete info.token;
                 if ( credit ) info.credit = credit;
                 const uuid = pack.getUuid(actorId);
-                info = foundry.utils.mergeObject(this.get(uuid) ?? {}, info, { inplace: false });
+                info = foundry.utils.mergeObject(info, this.get(uuid) ?? {}, { inplace: false });
                 this.set(uuid, info);
             }
         }
