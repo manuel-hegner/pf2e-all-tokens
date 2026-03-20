@@ -2,6 +2,8 @@ const excludeList = [
     'pf2e-all-tokens', //exclude self
     //because these module comes with their own code
     'pf2e-tokens-monster-core',
+    'pf2e-tokens-monster-core-2',
+    'pf2e-tokens-draconic-codex',
     'pf2e-tokens-characters',
     'pf2e-tokens-npc-core'
 ];
